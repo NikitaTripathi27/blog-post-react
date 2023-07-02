@@ -6,7 +6,9 @@ const routes = require("./routes");
 // const { errorHandler } = require("./middlewares/error");
 const ApiError = require("./utils/ApiError");
 const helmet = require("helmet");
+const { jwtStrategy } = require("./config/passport");
 
+const passport = require("passport");
 const app = express();
 
 // set security HTTP headers - https://helmetjs.github.io/
@@ -25,6 +27,8 @@ app.use(compression());
 app.use(cors());
 app.options("*", cors());
 
+app.use(passport.initialize());
+passport.use("jwt" , jwtStrategy);
 
 app.use("/", routes);
 

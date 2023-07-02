@@ -1,0 +1,22 @@
+
+.post-details{
+    margin-left: 50rem ;
+    margin-bottom: 35rem ;
+}
+
+.create-btn{
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+.btn-title{
+    color: rgb(217, 98, 98);
+    text-align: center;
+}
+
+.btn-author{
+    color: rgb(58, 87, 233);
+}
+.paper-box{
+    align-self: center;
+}
