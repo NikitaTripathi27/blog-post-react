@@ -47,6 +47,10 @@ const Login = (props) => {
       }
   }
 
+  const handleregisterClick =()=>{
+    navigate('/register')
+  }
+
   return (
     <Box
       className="login-layout"
@@ -90,6 +94,7 @@ const Login = (props) => {
           </FormControl>
         </Stack>
       </Paper>
+      <span className="sub-login">Don't have an account? </span><span onClick ={handleregisterClick} className="reg-click">Register Now</span>
     </Box>
   );
 }

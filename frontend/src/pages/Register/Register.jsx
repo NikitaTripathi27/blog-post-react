@@ -56,6 +56,10 @@ const Register = (props) => {
     }
   }
 
+  const handleClickLogin=()=>{
+    navigate('/login')
+  }
+
   return (
     <Box
       className="register-layout"
@@ -119,6 +123,7 @@ const Register = (props) => {
           </FormControl>
         </Stack>
       </Paper>
+      <span className='sub-register'>Already have an account ? </span><span onClick={handleClickLogin} className="login-click">Login Here</span>
     </Box>
   );
 }

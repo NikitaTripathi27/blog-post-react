@@ -5,6 +5,12 @@ import axios from "axios"
 import Stack from "@mui/material/Stack"
 import './BlogPost.css'
 import { TextField, Typography } from "@mui/material";
+import {
+    Card,
+    CardHeader,
+    CardMedia,
+    CardContent,
+     } from "@mui/material";
 const BlogPost = () => {
 
     const params = useParams()
@@ -21,20 +27,21 @@ const BlogPost = () => {
     
     return ( 
     <>
-        <Stack className='post-details'>
-            <h2 className="btn-title">{details.title}</h2>
-        
-        <h2 className="btn-author">Author: {details.author}</h2>
-        <Typography variant="subtitle1" className="btn-content">
-           {details.content}
-        </Typography>
-       <br/>
-       <h3>Comments</h3>
-       <TextField
-       placeholder="Comment"
-       />
-        </Stack>
-       
+        <Card sx={{ width: '100%' ,paddingBottom:'4rem'}} >
+      <CardHeader />
+      <CardMedia component="img" image={details.image} height="390" />
+      <CardContent sx={{height: '7rem'}}>
+        <Typography variant="subtitle1" sx={{color: 'orange'}}>{details.author}</Typography>
+        <Typography variant="h5">{details.brief}</Typography>
+        <Typography variant="body2">{details.content}</Typography>
+      </CardContent>
+   
+    </Card>
+    <h3>Comments</h3>
+    <TextField
+    placeholder="Add comment"
+    fullWidth
+     />
     </> 
     );
 }

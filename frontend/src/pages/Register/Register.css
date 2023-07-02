@@ -11,7 +11,12 @@
     padding: 1.5rem;
     margin: 8rem auto 1rem;
 }
-
+.sub-register{
+    margin-left: 17rem;
+}
+.login-click{
+    color:blue
+}
 @media screen and (min-width: 768px) {
     .register-form {
         width: 65%;

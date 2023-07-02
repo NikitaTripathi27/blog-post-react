@@ -30,7 +30,7 @@ router.get("/id/:id", findDiscussionById);
 router.patch("/id/:id", updateDiscussion);
 router.delete("/id/:id", deleteDiscussion);
 
-router.patch(
+router.put(
   "/:id/comment",
   fetchDiscussion,
   addNewComment
