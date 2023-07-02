@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import config from "../../config/config"
 import axios from "axios"
 import Stack from "@mui/material/Stack"
-import Button from "@mui/material/Button"
-import Box from "@mui/material/Box"
-import Paper from "@mui/material/Paper"
 import './BlogPost.css'
+import { TextField, Typography } from "@mui/material";
 const BlogPost = () => {
 
     const params = useParams()
@@ -27,10 +25,14 @@ const BlogPost = () => {
             <h2 className="btn-title">{details.title}</h2>
         
         <h2 className="btn-author">Author: {details.author}</h2>
-        <p>
+        <Typography variant="subtitle1" className="btn-content">
            {details.content}
-        </p>
-       
+        </Typography>
+       <br/>
+       <h3>Comments</h3>
+       <TextField
+       placeholder="Comment"
+       />
         </Stack>
        
     </> 

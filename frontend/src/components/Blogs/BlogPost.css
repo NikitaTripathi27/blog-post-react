@@ -1,7 +1,8 @@
 
 .post-details{
-    margin-left: 50rem ;
-    margin-bottom: 35rem ;
+   
+    margin-bottom: 35rem !important;
+    /* margin:auto; */
 }
 
 .create-btn{
@@ -12,11 +13,18 @@
 .btn-title{
     color: rgb(217, 98, 98);
     text-align: center;
+    padding:1rem;
 }
 
 .btn-author{
     color: rgb(58, 87, 233);
+    padding: 2rem;
+    font-size:large !important;
 }
 .paper-box{
     align-self: center;
+}
+
+.btn-content{
+    
 }

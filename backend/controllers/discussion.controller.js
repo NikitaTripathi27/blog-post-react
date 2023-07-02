@@ -65,12 +65,13 @@ const createNewDiscussion = async (req, res) => {
 const addNewComment = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(req.body)
     const result = await DiscussionServiceInstance.addComment(req.body, id);
     res.send(result);
   } catch (error) {
     res.status(500).send({
       message: "Failed to add comment to this discussion",
-      discussion_id: id,
+     
       error,
     });
   }

@@ -48,6 +48,7 @@ class DiscussionService {
 
   addComment = async (comment, discussionId) => {
     try {
+      console.log("in comment")
       const { author, content } = comment;
       const newComment = { author, content };
       const result = await Discussion.findOneAndUpdate(
@@ -55,6 +56,7 @@ class DiscussionService {
         { $push: { comment: newComment } },
         { new: true }
       );
+      console.log(result)
       return result;
     } catch (error) {
       throw error;
