@@ -1,4 +1,4 @@
 const config = {
-    endpoint : 'http://localhost:8082/v1'
+    endpoint : 'https://blog-post-ntub.onrender.com/v1'
 }
 export default config
